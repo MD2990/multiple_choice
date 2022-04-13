@@ -32,12 +32,9 @@ export default function MainCard() {
   };
   return (
     <Wrap
+      mt={[1, 2, 3, 4]}
       align="center"
       justify="center"
-      alignContent={"center"}
-      alignItems={"center"}
-      alignSelf={"center"}
-      justifyContent={"center"}
       direction={"column"}
     >
       <WrapItem className="animate__animated  animate__flip">
@@ -65,7 +62,7 @@ export default function MainCard() {
 
           <VStack
             align="center"
-            spacing={[2, 4, 6, 8]}
+            spacing={[2, 4, 6]}
             justify="flex-start"
             fontSize={["md", "xl", "2xl", "3xl"]}
             className="animate__animated animate__backInDown"
@@ -75,7 +72,6 @@ export default function MainCard() {
               ({ id, isCorrect, text }) => {
                 return (
                   <Button
-                  
                     w="fit-content"
                     minW="60%"
                     p={[4, 6, 8]}

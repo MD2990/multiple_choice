@@ -33,9 +33,9 @@ export default function Timer() {
   }, [snap.seconds, snap.isTimeUp, seconds]);
 
   return (
-    <Center  p="5" m="2">
+    <Center p="2" m="2">
       <CircularProgress
-        size={["3.5rem", "5rem", "10rem", "15rem"]}
+        size={["3.5rem", "5rem", "10rem"]}
         value={snap.seconds}
         min={0}
         max={seconds}
