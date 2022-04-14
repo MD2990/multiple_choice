@@ -14,6 +14,7 @@ export default function Start() {
           fontFamily={"serif"}
           fontWeight="bold"
           fontSize={size}
+          textAlign="center"
         >
           Welcome to React JS Multiple Choice Quiz
         </Text>

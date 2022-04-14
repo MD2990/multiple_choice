@@ -21,7 +21,7 @@ export default function BottomButtons() {
       colorScheme={"teal"}
       w="fit-content"
       p={[2, 4, 6, 8]}
-      mt="-12%"
+      mt="-5%"
       onClick={handleClick}
       disabled={disabled}
     >
