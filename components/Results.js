@@ -9,7 +9,7 @@ export default function Results({ title }) {
   const router = useRouter();
 
   return (
-    <Center>
+    <Center userSelect={"none"}>
       <VStack
         m="10%"
         boxShadow={"inner"}

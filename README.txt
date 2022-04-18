@@ -1,0 +1,13 @@
+
+## Requirements
+1- For development, you will only need Node.js v(14 and above) installed in your environnement.(https://nodejs.org/en)
+2- Run npm install to install all node modules.
+3- Run " npm run dev " to start the server development server on port 3000.
+4- Run " npm run build " to build a production version of the application.
+5- Visit http://localhost:3000 to see the application in action.
+
+
+
+## GitHub 
+The project is hosted on github. You can find the source code here: https://github.com/MD2990/multiple_choice
+## Vercel deployed version : https://multiple-choice.vercel.app/
