@@ -9,20 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@chakra-ui/react": "^1.8.8",
+    "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
     "animate.css": "^4.1.1",
     "framer-motion": "^6",
-    "nanoid": "^3.3.2",
-    "next": "12.1.4",
-    "react": "18.0.0",
-    "react-dom": "18.0.0",
-    "sweetalert2": "^11.4.8",
-    "valtio": "^1.5.2"
+    "nanoid": "^4.0.0",
+    "next": "12.2.3",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "sweetalert2": "^11.4.24",
+    "valtio": "^1.6.3"
   },
   "devDependencies": {
-    "eslint": "8.13.0",
-    "eslint-config-next": "12.1.4"
+    "eslint": "8.21.0",
+    "eslint-config-next": "12.2.3"
   }
 }

@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Divider,
   Text,
   VStack,
@@ -31,75 +32,77 @@ export default function MainCard() {
     }
   };
   return (
-    <Wrap
-      mt={[1, 2, 3, 4]}
-      align="center"
-      justify="center"
-      direction={"column"}
-    >
-      <WrapItem className="animate__animated  animate__flip">
-        <Timer />
-      </WrapItem>
-      <WrapItem className="animate__animated animate__delay-2s  animate__lightSpeedInRight ">
-        <Text as="cite" fontSize={"sm"}>
-          Question: {snap.currentQuestion + 1} out of {snap.data.length}
-        </Text>
-      </WrapItem>
-      <WrapItem>
-        <Box boxShadow={"2xl"} rounded="2xl" p="2" px="6" m="2">
-          <Text
-            overflow={"hidden"}
-            textOverflow={"ellipsis"}
-            textAlign={"center"}
-            color={"teal.400"}
-            mt="3"
-            textShadow={`0px 0px 5px lightGray`}
-            fontWeight="bold"
-            fontSize={["md", "xl", "2xl", "4xl"]}
-          >
-            {snap.data[snap.currentQuestion].text}
+    <Center>
+      <Wrap
+        mt={[1, 2, 3, 4]}
+        align="center"
+        justify="center"
+        direction={"column"}
+      >
+        <WrapItem className="animate__animated  animate__flip">
+          <Timer />
+        </WrapItem>
+        <WrapItem className="animate__animated animate__delay-2s  animate__lightSpeedInRight ">
+          <Text as="cite" fontSize={"sm"}>
+            Question: {snap.currentQuestion + 1} out of {snap.data.length}
           </Text>
+        </WrapItem>
+        <WrapItem>
+          <Box boxShadow={"2xl"} rounded="2xl" p="2" px="6" m="2">
+            <Text
+              overflow={"hidden"}
+              textOverflow={"ellipsis"}
+              textAlign={"center"}
+              color={"teal.400"}
+              mt="3"
+              textShadow={`0px 0px 5px lightGray`}
+              fontWeight="bold"
+              fontSize={["md", "xl", "2xl", "4xl"]}
+            >
+              {snap.data[snap.currentQuestion].text}
+            </Text>
 
-          <VStack
-            align="center"
-            spacing={[2, 4, 6]}
-            justify="flex-start"
-            fontSize={["md", "xl", "2xl", "3xl"]}
-            className="animate__animated animate__backInDown"
-          >
-            <Divider />
-            {snap.data[snap.currentQuestion].options.map(
-              ({ id, isCorrect, text }) => {
-                return (
-                  <Button
-                    w="fit-content"
-                    minW="60%"
-                    p={[4, 6, 8]}
-                    fontSize={["xs", "md", "xl", "2xl"]}
-                    color={"blackAlpha.600"}
-                    textAlign={"center"}
-                    key={id}
-                    bg={`${
-                      snap.selectedValue[snap.currentQuestion] === id
-                        ? "lightGreen"
-                        : "lightgray"
-                    } `}
-                    onClick={() => {
-                      state.selectedValue[snap.currentQuestion] = id || [];
+            <VStack
+              align="center"
+              spacing={[2, 4, 6]}
+              justify="flex-start"
+              fontSize={["md", "xl", "2xl", "3xl"]}
+              className="animate__animated animate__backInDown"
+            >
+              <Divider />
+              {snap.data[snap.currentQuestion].options.map(
+                ({ id, isCorrect, text }) => {
+                  return (
+                    <Button
+                      w="fit-content"
+                      minW="60%"
+                      p={[4, 6, 8]}
+                      fontSize={["xs", "md", "xl", "2xl"]}
+                      color={"blackAlpha.600"}
+                      textAlign={"center"}
+                      key={id}
+                      bg={`${
+                        snap.selectedValue[snap.currentQuestion] === id
+                          ? "lightGreen"
+                          : "lightgray"
+                      } `}
+                      onClick={() => {
+                        state.selectedValue[snap.currentQuestion] = id || [];
 
-                      optionClicked(isCorrect);
-                    }}
-                  >
-                    {text}
-                  </Button>
-                );
-              }
-            )}
-            <Divider />
-            <BottomButtons />
-          </VStack>
-        </Box>{" "}
-      </WrapItem>
-    </Wrap>
+                        optionClicked(isCorrect);
+                      }}
+                    >
+                      {text}
+                    </Button>
+                  );
+                }
+              )}
+              <Divider />
+              <BottomButtons />
+            </VStack>
+          </Box>{" "}
+        </WrapItem>
+      </Wrap>
+    </Center>
   );
 }
